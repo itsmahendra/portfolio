@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a001f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  color: #c084fc;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #c084fc;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.toggle {
+  cursor: pointer;
+  font-size: 12px;
+  color: #c084fc;
+}
+
+#msg {
+  margin-top: 10px;
+  font-size: 14px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Login</h1>
+
+  <input type="email" id="email" placeholder="Enter Email">
+  <input type="password" id="pass" placeholder="Enter Password">
+
+  <span class="toggle" onclick="togglePass()">Show Password</span>
+
+  <button onclick="login()">Login</button>
+
+  <p id="msg"></p>
+</div>
+
+<script>
+function togglePass() {
+  let pass = document.getElementById("pass");
+
+  if(pass.type === "password") {
+    pass.type = "text";
+  } else {
+    pass.type = "password";
+  }
+}
+
+function login() {
+  let email = document.getElementById("email").value;
+  let pass = document.getElementById("pass").value;
+
+  let msg = document.getElementById("msg");
+
+  if(email === "" || pass === "") {
+    msg.innerText = "⚠ Please fill all fields";
+    msg.style.color = "orange";
+  } 
+  else if(pass.length < 6) {
+    msg.innerText = "❌ Password must be 6+ characters";
+    msg.style.color = "red";
+  } 
+  else {
+    msg.innerText = "✅ Login Successful!";
+    msg.style.color = "lightgreen";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced Todo</title>
+
+<style>
+body {
+  background: #0a0a0a;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+h1 {
+  color: #c084fc;
+}
+
+.input-box {
+  margin: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  background: #c084fc;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #1a001f;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete {
+  color: red;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <h1>My Todo App</h1>
+
+  <div class="input-box">
+    <input id="task" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+  </div>
+
+  <ul id="list"></ul>
+</div>
+
+<script>
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+function showTasks() {
+  let list = document.getElementById("list");
+  list.innerHTML = "";
+
+  tasks.forEach((task, index) => {
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+      <span onclick="toggleTask(${index})" class="${task.done ? 'completed' : ''}">
+        ${task.text}
+      </span>
+      <span class="delete" onclick="deleteTask(${index})">❌</span>
+    `;
+
+    list.appendChild(li);
+  });
+}
+
+function addTask() {
+  let input = document.getElementById("task");
+  if(input.value === "") return;
+
+  tasks.push({ text: input.value, done: false });
+  input.value = "";
+  saveTasks();
+}
+
+function toggleTask(index) {
+  tasks[index].done = !tasks[index].done;
+  saveTasks();
+}
+
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  saveTasks();
+}
+
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  showTasks();
+}
+
+showTasks();
+</script>
+
+</body>
+</html>
