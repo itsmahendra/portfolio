@@ -260,3 +260,97 @@ footer {
   }
 
 }
+
+ /* ===== GLOBAL RESPONSIVE FIX ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== TABLET (768px) ===== */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  nav h2 {
+    font-size: 18px;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+
+  .image img {
+    width: 220px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 30px 15px;
+  }
+
+  /* PROJECTS */
+  .project-card {
+    width: 100%;
+  }
+
+  /* BUTTON */
+  button {
+    width: 100%;
+  }
+
+}
+
+/* ===== MOBILE SMALL (480px) ===== */
+@media (max-width: 480px) {
+
+  nav h2 {
+    font-size: 16px;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .image img {
+    width: 180px;
+  }
+
+}
