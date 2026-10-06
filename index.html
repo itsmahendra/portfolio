@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahendra | Developer Portfolio</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Mahendra.</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content" data-aos="fade-right">
+      <h3>Hi, I'm Mahendra 👋</h3>
+      <h1>Frontend & Software Developer</h1>
+      <p>I design and build high-quality, modern web applications with immersive user interfaces and smooth interactive experiences.</p>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://github.com/itsmahendra" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:example@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+
+    <div class="hero-img" data-aos="fade-left">
+      <img src="your-photo.jpg" alt="Mahendra Profile Photo" />
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h2 class="section-title" data-aos="fade-up">Skills & Tools</h2>
+    <div class="skills-grid">
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fab fa-html5"></i>
+        <h3>HTML5</h3>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
+        <i class="fab fa-css3-alt"></i>
+        <h3>CSS3</h3>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fab fa-js"></i>
+        <h3>JavaScript</h3>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+        <i class="fab fa-java"></i>
+        <h3>Java</h3>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fab fa-git-alt"></i>
+        <h3>Git</h3>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="350">
+        <i class="fab fa-github"></i>
+        <h3>GitHub</h3>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+        <i class="fas fa-code"></i>
+        <h3>VS Code</h3>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="450">
+        <i class="fab fa-figma"></i>
+        <h3>Figma</h3>
+      </div>
+      <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Canva</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Working Projects Section -->
+  <section id="projects">
+    <h2 class="section-title" data-aos="fade-up">Featured Live Projects</h2>
+    <div class="projects-grid">
+      
+      <!-- Project 1: Modern Login Page -->
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&q=80');"></div>
+        <div class="project-info">
+          <h3>Modern Glassmorphism Login</h3>
+          <p>A sleek, interactive glassmorphism authentication page with toggleable Login/Sign-up modes.</p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+          </div>
+          <br>
+          <a href="#" onclick="openProjectModal('projects/login.html'); return false;" class="btn btn-sm">Live Demo <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+
+      <!-- Project 2: One-Page E-commerce Site -->
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=500&q=80');"></div>
+        <div class="project-info">
+          <h3>Urban Store E-Commerce</h3>
+          <p>A responsive single-page store layout with a working interactive product cart and checkout modal.</p>
+          <div class="project-tags">
+            <span>HTML5</span>
+            <span>CSS Grid</span>
+            <span>JavaScript</span>
+          </div>
+          <br>
+          <a href="#" onclick="openProjectModal('projects/ecommerce.html'); return false;" class="btn btn-sm">Live Demo <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+
+      <!-- Project 3: Interactive Dashboard / Task App -->
+      <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&q=80');"></div>
+        <div class="project-info">
+          <h3>Task Management Dashboard</h3>
+          <p>An interactive productivity web app for task tracking, status filtering, and task completion.</p>
+          <div class="project-tags">
+            <span>JavaScript</span>
+            <span>Local Web App</span>
+            <span>UI/UX</span>
+          </div>
+          <br>
+          <a href="#" onclick="openProjectModal('projects/dashboard.html'); return false;" class="btn btn-sm">Live Demo <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+    <div class="contact-container" data-aos="zoom-in">
+      <div class="contact-card">
+        <h3>Let's Work Together!</h3>
+        <p>Feel free to reach out for collaborations, project inquiries, or just a friendly chat.</p>
+        <a href="mailto:example@gmail.com" class="btn">Send an Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Mahendra. All rights reserved.</p>
+  </footer>
+
+  <!-- Portfolio In-App Modal Frame -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">Live Project Preview</span>
+        <span class="close-btn" onclick="closeProjectModal()">&times;</span>
+      </div>
+      <iframe id="projectIframe" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- AOS Animation Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
